@@ -1,6 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
-class FDemo extends Frame{
+class FDemo extends Frame implements ActionListener{
 	Button b1[]=new Button[9];
 	int x=100,y=100;
 	int c=1;
@@ -15,6 +15,7 @@ class FDemo extends Frame{
 				b1[k].setSize(100,100);
 				b1[k].setLocation(x,y);
 				add(b1[k]);
+				b1[k].addActionListener(this);
 				k++;
 				x+=100;
 			}
@@ -22,6 +23,17 @@ class FDemo extends Frame{
 			x=100;
 		}
 	}
+	
+	public void actionPerformed(ActionEvent e) {
+    Button b = (Button) e.getSource(); 
+    if (c % 2 == 0) {
+        b.setLabel("0"); 
+    } else {
+        b.setLabel("X"); 
+    }
+    c++;
+}
+
 	
 }
 
