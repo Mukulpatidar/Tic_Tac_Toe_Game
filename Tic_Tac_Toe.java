@@ -57,6 +57,15 @@ class FDemo extends Frame implements ActionListener{
                 board[0][i].equals(board[1][i]) &&
                 board[1][i].equals(board[2][i])) return true;
 			}
+			
+			 // Check diagonals
+        if (!board[0][0].equals("") &&
+            board[0][0].equals(board[1][1]) &&
+            board[1][1].equals(board[2][2])) return true;
+
+        if (!board[0][2].equals("") &&
+            board[0][2].equals(board[1][1]) &&
+            board[1][1].equals(board[2][0])) return true;
 		 
 		 return false;
 	 }
