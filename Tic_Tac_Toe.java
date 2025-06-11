@@ -26,13 +26,25 @@ class FDemo extends Frame implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
     Button b = (Button) e.getSource(); 
+	if(!b.getLabel().equals(""))return;
     if (c % 2 == 0) {
         b.setLabel("0"); 
     } else {
         b.setLabel("X"); 
     }
     c++;
+	
+	if(checkWinner()){
+		
+	}
 }
+
+     public boolean checkWinner(){
+		 String [][]board =new String[3][3];
+		 for(int i=0;i<9;i++){
+			 board[i/3][i%3]=b1[i].getLabel();
+		 }
+	 }
 
 	
 }
