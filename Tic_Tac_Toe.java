@@ -51,6 +51,11 @@ class FDemo extends Frame implements ActionListener{
 		  if (!board[i][0].equals("") &&
                 board[i][0].equals(board[i][1]) &&
                 board[i][1].equals(board[i][2])) return true;
+				
+				 // Check columns
+            if (!board[0][i].equals("") &&
+                board[0][i].equals(board[1][i]) &&
+                board[1][i].equals(board[2][i])) return true;
 			}
 		 
 		 return false;
