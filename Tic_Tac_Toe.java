@@ -35,8 +35,8 @@ class FDemo extends Frame implements ActionListener{
     c++;
 	
 	if(checkWinner()){
-		String winner=(c%2==1)?"Player X":"Player 0";
-		showDialog(winner+ "wins");
+		String winner=(c%2==1)?"Player 0":"Player X";
+		showDialog(winner+ " wins");
 	}
 }
 
@@ -45,6 +45,13 @@ class FDemo extends Frame implements ActionListener{
 		 for(int i=0;i<9;i++){
 			 board[i/3][i%3]=b1[i].getLabel();
 		 }
+		 
+		 //check rows winner
+		    for (int i = 0; i < 3; i++) {
+		  if (!board[i][0].equals("") &&
+                board[i][0].equals(board[i][1]) &&
+                board[i][1].equals(board[i][2])) return true;
+			}
 		 
 		 return false;
 	 }
