@@ -22,6 +22,12 @@ class FDemo extends Frame implements ActionListener{
 			y+=100;
 			x=100;
 		}
+		
+		addWindowListener(new WindowAdapter() {
+		public void windowClosing(WindowEvent we) {
+			System.exit(0);
+		}
+	});
 	}
 	
 	public void actionPerformed(ActionEvent e) {
