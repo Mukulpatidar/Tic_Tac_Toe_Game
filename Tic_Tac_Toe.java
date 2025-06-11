@@ -37,6 +37,7 @@ class FDemo extends Frame implements ActionListener{
 	if(checkWinner()){
 		String winner=(c%2==1)?"Player 0":"Player X";
 		showDialog(winner+ " wins");
+		disableButtons();
 	}else if(isBoardFull()){
 		 showDialog("It's a Tie!");
 	}
@@ -49,6 +50,12 @@ class FDemo extends Frame implements ActionListener{
         }
         return true;
 	  }
+	  
+	    public void disableButtons() {
+        for (int i = 0; i < 9; i++) {
+            b1[i].setEnabled(false);
+        }
+    }
 	  
      public boolean checkWinner(){
 		 String [][]board =new String[3][3];
