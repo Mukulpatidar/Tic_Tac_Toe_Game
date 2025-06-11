@@ -37,9 +37,19 @@ class FDemo extends Frame implements ActionListener{
 	if(checkWinner()){
 		String winner=(c%2==1)?"Player 0":"Player X";
 		showDialog(winner+ " wins");
+	}else if(isBoardFull()){
+		 showDialog("It's a Tie!");
 	}
 }
 
+
+      public boolean isBoardFull(){
+		   for (Button button : b1) {
+            if (button.getLabel().equals("")) return false;
+        }
+        return true;
+	  }
+	  
      public boolean checkWinner(){
 		 String [][]board =new String[3][3];
 		 for(int i=0;i<9;i++){
