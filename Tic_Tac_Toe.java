@@ -118,7 +118,7 @@ class FDemo extends Frame implements ActionListener{
 		   Dialog d = new Dialog(this, "Game Over", true);
         d.setLayout(new FlowLayout());
         d.setSize(250, 100);
-        d.setLocation(200, 200);
+        d.setLocationRelativeTo(this);
         d.add(new Label(message));
         Button ok = new Button("OK");
         ok.addActionListener(new ActionListener() {
@@ -127,6 +127,12 @@ class FDemo extends Frame implements ActionListener{
             }
         });
         d.add(ok);
+		
+		 d.addWindowListener(new WindowAdapter() {
+        public void windowClosing(WindowEvent we) {
+            d.setVisible(false);
+        }
+    });
         d.setVisible(true);
 	 }
 	 
