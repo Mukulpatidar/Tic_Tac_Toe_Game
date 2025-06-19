@@ -4,12 +4,14 @@ class FDemo extends Frame implements ActionListener{
 	Button b1[]=new Button[9];
 	Button restart;
 	int turn=1;
-	int x=100,y=100;
+	int x=70,y=100;
 	int c=1;
 	FDemo(){
 		Font f=new Font(" ",Font.ITALIC,30);
+		
 		setFont(f);
 		setLayout(null);
+		
 		int k=0;
 		for(int i=1;i<=3;i++){
 			for(int j=1;j<=3;j++){
@@ -22,7 +24,7 @@ class FDemo extends Frame implements ActionListener{
 				x+=100;
 			}
 			y+=100;
-			x=100;
+			x=70;
 		}
 		
 		addWindowListener(new WindowAdapter() {
@@ -34,7 +36,7 @@ class FDemo extends Frame implements ActionListener{
 	
 	 restart = new Button("Restart");
         restart.setFont(new Font("Arial", Font.BOLD, 20));
-        restart.setBounds(150, 420, 200, 50);
+        restart.setBounds(120, 420, 200, 50);
 		restart.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                resetGame();
@@ -139,7 +141,9 @@ class Tic_Tac_Toe{
 		FDemo f=new FDemo();
 		f.setVisible(true);
 		f.setLocation(200,200);
-		f.setSize(500,600);
+		f.setSize(420,480);
+		f.setResizable(false);
+		f.setTitle("Tic Tac Toe - AWT Game");
 		
 	}
 }
