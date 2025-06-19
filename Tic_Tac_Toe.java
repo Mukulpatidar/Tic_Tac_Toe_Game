@@ -3,6 +3,7 @@ import java.awt.event.*;
 class FDemo extends Frame implements ActionListener{
 	Button b1[]=new Button[9];
 	Button restart;
+	int turn=1;
 	int x=100,y=100;
 	int c=1;
 	FDemo(){
@@ -36,7 +37,7 @@ class FDemo extends Frame implements ActionListener{
         restart.setBounds(150, 420, 200, 50);
 		restart.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-               
+               resetGame();
             }
         });
         add(restart);
