@@ -40,6 +40,8 @@ class FDemo extends Frame implements ActionListener{
 	
 	 restart = new Button("Restart");
         restart.setFont(new Font("Arial", Font.BOLD, 20));
+		restart.setBackground(new Color(100, 149, 237)); // Cornflower Blue
+        restart.setForeground(Color.WHITE);
         restart.setBounds(100, 370, 200, 50);
 		restart.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
