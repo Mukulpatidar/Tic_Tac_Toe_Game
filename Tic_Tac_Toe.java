@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 class FDemo extends Frame implements ActionListener{
 	Button b1[]=new Button[9];
+	Button restart;
 	int x=100,y=100;
 	int c=1;
 	FDemo(){
@@ -28,6 +29,17 @@ class FDemo extends Frame implements ActionListener{
 			System.exit(0);
 		}
 	});
+	
+	
+	 restart = new Button("Restart");
+        restart.setFont(new Font("Arial", Font.BOLD, 20));
+        restart.setBounds(150, 420, 200, 50);
+		restart.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+               
+            }
+        });
+        add(restart);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
