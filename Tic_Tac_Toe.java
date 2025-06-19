@@ -120,6 +120,15 @@ class FDemo extends Frame implements ActionListener{
         d.add(ok);
         d.setVisible(true);
 	 }
+	 
+	 
+	  public void resetGame() {
+        for (int i = 0; i < 9; i++) {
+            b1[i].setLabel("");
+            b1[i].setEnabled(true);
+        }
+        turn = 1;
+    }
 
 	
 }
