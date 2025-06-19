@@ -156,6 +156,8 @@ class Tic_Tac_Toe{
 		f.setSize(380,430);
 		f.setResizable(false);
 		f.setTitle("Tic Tac Toe - AWT Game");
+		f.setLocationRelativeTo(null); // Center the window
+
 		
 	}
 }
