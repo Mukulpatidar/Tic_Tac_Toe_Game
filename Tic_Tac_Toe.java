@@ -118,6 +118,6 @@ class Tic_Tac_Toe{
 		f.setVisible(true);
 		f.setLocation(200,200);
 		f.setSize(500,600);
-		// f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);
+		
 	}
 }
